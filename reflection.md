@@ -48,11 +48,9 @@ or a neatly formatted score is not sufficient evidence of a correct process.
 
 ## Observations from my experiments
 
-The first public-test run achieved 7/7 correct classifications, but its audit log showed that CV\_7 received the fallback score of 0.5 after a JSONDecodeError. A second run achieved 7/7 in 79.34 seconds without recorded errors and explicitly identified the unsupported Docker skill in CV\_7. This shows why a correct classification alone does not prove that verification succeeded.
+The latest public-test run correctly classified all seven CVs in 79.34 seconds, with no recorded errors. It also identified the unsupported Docker skill in CV_7, providing a concrete reason for rejecting that CV. Reviewing an earlier run revealed a JSON parsing failure that the overall accuracy score alone did not expose. Comparing the two runs helped me understand the value of audit logs: they show whether a correct prediction is supported by an actual verification process.
 
-
-
-In the local attack experiment, the genuine CV scored 0.9, while both the adversarial CV and the control CV scored 0.1. The injected reconciliation note therefore did not change the final score or cause acceptance in this trial. This single observation does not establish performance against the instructor's hidden verifiers.
+In the local robustness test, the verifier accepted the genuine CV with a score of 0.9 and rejected both the adversarial and control CVs with scores of 0.1. The injected note did not cause the verifier to accept the false skill claim in this trial. Although the attack did not succeed against my own agent, the experiment provided a useful example of maintaining the boundary between document content and verification instructions. It also showed why defensive performance and attack effectiveness need to be evaluated separately.
 
 ## Assistance
 
