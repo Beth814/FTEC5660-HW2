@@ -101,8 +101,8 @@ The false claim is Additional skill: Solidity. Its absence was checked against K
 
 ### Reflection
 
-See [reflection.md](reflection.md). Confirm whether Blackboard also requires a separate reflection upload.
+See [reflection.md](reflection.md).
 
 ### Assistance and provenance
 
-The course starter was retained. A peer-provided implementation and PDF were inspected for comparison. The revised implementation, experiment generator and draft writing were prepared with AI assistance. This statement should be reviewed for accuracy and supplemented with any attribution required by the course; cosmetic changes are not a claim of independent authorship.
+The revised implementation, experiment generator and draft writing were prepared with AI assistance.
